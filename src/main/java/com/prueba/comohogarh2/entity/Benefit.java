@@ -1,5 +1,6 @@
 package com.prueba.comohogarh2.entity;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +22,9 @@ public class Benefit {
     @Column(unique = true)
     private String beneficio;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @MapsId
+    @NotNull
     private Client client;
 
     @Builder.Default
