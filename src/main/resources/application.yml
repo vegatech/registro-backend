@@ -1,4 +1,8 @@
 spring:
+  show-sql: true
+  properties:
+    hibernate:
+      format_sql: true
   profiles: local
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
@@ -6,7 +10,7 @@ spring:
     hibernate:
       ddl-auto: create
   datasource:
-    jdbcUrl: jdbc:h2:mem:testdb
+    jdbcUrl: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     maximumPoolSize: 10
     minimumIdle: 5
@@ -14,3 +18,8 @@ spring:
     maxLifetime: 120000
     leakDetectionThreshold: 180000
     poolName: "test"
+  logging:
+    level:
+      org:
+        hibernate:
+          type: trace

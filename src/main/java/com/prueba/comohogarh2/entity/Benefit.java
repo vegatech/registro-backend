@@ -17,6 +17,7 @@ import javax.persistence.*;
 public class Benefit {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @Column(unique = true)
