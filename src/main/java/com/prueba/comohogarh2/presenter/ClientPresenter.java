@@ -19,14 +19,13 @@ public class ClientPresenter {
 
     private Integer clientId;
 
-
     private String name;
+
     private String email;
+
     private String phone;
 
-
     private TypeFormat groupId;
-
 
     private BenefitPresenter benefitPresent;
 }
