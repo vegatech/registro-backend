@@ -25,7 +25,7 @@ public class ClientPresenter {
     private String phone;
 
 
-    private TypeFormat groupId;
+    private String groupId;
 
 
     private BenefitPresenter benefitPresent;

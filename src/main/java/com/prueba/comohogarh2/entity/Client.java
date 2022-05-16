@@ -26,12 +26,12 @@ public class Client {
     private String email;
     private String phone;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    private TypeFormat groupId;
+
+    //@Enumerated(EnumType.STRING)
+    private String groupId;
 
     @OneToOne(mappedBy = "client",
-            fetch = FetchType.LAZY)
+            fetch = FetchType.EAGER)
     private Benefit benefit;
 
 }

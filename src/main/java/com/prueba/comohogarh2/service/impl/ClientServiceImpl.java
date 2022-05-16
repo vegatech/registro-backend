@@ -5,14 +5,21 @@ import com.prueba.comohogarh2.presenter.BenefitPresenter;
 import com.prueba.comohogarh2.presenter.ClientPresenter;
 import com.prueba.comohogarh2.repository.ClientRepository;
 import com.prueba.comohogarh2.service.ClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class ClientServiceImpl implements ClientService {
-
+    @Autowired
     private ClientRepository clientRepository;
 
+
+    @Override
+    public Client save(Client client) {
+        return clientRepository.save(client);
+    }
 
     @Override
     public List<ClientPresenter> getAllClient() {
